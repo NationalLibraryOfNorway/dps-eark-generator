@@ -82,3 +82,9 @@ The SIP Generator expects a specific directory structure for the input data prov
             *   `other/`: For any other metadata files specific to this representation.
 
 The generator will automatically include necessary XML schemas (MODS, PREMIS, MediaInfo, MAVIS) in the generated SIP if it detects corresponding metadata files within this structure.
+
+
+### SIP Specifications ###
+
+SIP Specifications for the DPS are described here:
+[https://digitalpreservation.no/nb/docs/dps/sip/](https://digitalpreservation.no/nb/docs/dps/sip/)
