@@ -11,14 +11,10 @@ public class Main {
     public static void main(String[] args) {
 
         if (args.length < 4) {
-            System.out.println("Usage: java -jar EarkGenerator-1.0-SNAPSHOT.jar <rootPathStr> <outputFolder> <description> <summissionAgreement>");
+            System.out.println("Usage: java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar <rootPathStr> <outputFolder> <description> <summissionAgreement>");
+            System.out.println("Example: java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar \"~/e-ark/digifoto_20171115_00295_NB_MIT_ENR_00169\" \"~/output\" \"Elg fotografert i Nordland 2017\" \"ABCD1234\"");
             System.exit(1);
         }
-
-//        String rootPathStr = "/home/thomase/temp/e-ark/digifoto_20171115_00295_NB_MIT_ENR_00169"; // Replace with your actual root path
-//        String outputFolder = "/home/thomase/temp/e-ark/output"; // Replace with your actual output folder
-//        String description = "Sample description for the SIP";
-//        String summissionAgreement = "ABCD1234"
 
         String rootPathStr = args[0];
         String outputFolder = args[1];
