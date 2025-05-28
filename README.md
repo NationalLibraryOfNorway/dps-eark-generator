@@ -22,31 +22,41 @@ The application can perform two main actions: `generate` a new SIP or `validate`
 java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar <action> [options]
 ```
 
-**Actions:**
+## Actions
 
-1.  **`generate`**: Creates a new E-ARK SIP.
-    *   **Arguments:** `<rootPathStr> <outputFolder> <description> <submissionAgreement>`
-        *   `<rootPathStr>`: The absolute path to the root directory containing the data to be packaged. (See "Input File Structure" below).
-        *   `<outputFolder>`: The absolute path to the directory where the generated SIP will be saved.
-        *   `<description>`: A textual description of the SIP content.
-        *   `<submissionAgreement>`: The identifier of the submission agreement.
-    *   **Example:**
-        ```bash
-        java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar generate "/path/to/your/data" "/path/to/output/sips" "Moose at sunset, Nordland" "SA-ABCD1234"
-        ```
+### `generate`
+Creates a new E-ARK SIP.
 
-2.  **`validate`**: Validates an existing E-ARK SIP against a specified E-ARK version.
-    *   **Arguments:** `<pathToSip> <pathToReportOutput>`
-        *   `<pathToSip>`: The absolute path to the SIP to be validated (can be a folder or a ZIP file).
-        *   `<pathToReportOutput>`: The absolute path where the JSON validation report will be saved.
-    *   **Example (Folder SIP):**
-        ```bash
-        java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar validate "/path/to/existing/sip_folder" "./validation_report.json"
-        ```
-    *   **Example (ZIP SIP):**
-        ```bash
-        java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar validate "/path/to/existing/sip.zip" "./validation_report.json"
-        ```
+**Arguments:**
+`<rootPathStr>`: The absolute path to the root directory containing the data to be packaged. (See "Input File Structure" below).
+`<outputFolder>`: The absolute path to the directory where the generated SIP will be saved.
+`<description>`: A textual description of the SIP content.
+`<submissionAgreement>`: The identifier of the submission agreement.
+
+**Example:**
+```bash
+java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar generate \
+"/path/to/your/data" "/path/to/output/sips" "Moose at sunset, Nordland" "SA-ABCD1234"
+```
+
+### `validate`
+Validates an existing E-ARK SIP against a specified E-ARK version.
+
+**Arguments:**
+`<pathToSip>`: The absolute path to the SIP to be validated (can be a folder or a ZIP file).
+`<pathToReportOutput>`: The absolute path where the JSON validation report will be saved.
+
+**Example (Folder SIP):**
+```bash
+java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar validate \
+"/path/to/existing/sip_folder" "./validation_report.json"
+```
+
+**Example (ZIP SIP):**
+```bash
+java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar validate \
+"/path/to/existing/sip.zip" "./validation_report.json"
+```
 
 ### Input File Structure (for `generate` action)
 
