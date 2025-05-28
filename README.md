@@ -27,11 +27,13 @@ java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar <acti
 ### `generate`
 Creates a new E-ARK SIP.
 
-**Arguments:**
-`<rootPathStr>`: The absolute path to the root directory containing the data to be packaged. (See "Input File Structure" below).
-`<outputFolder>`: The absolute path to the directory where the generated SIP will be saved.
-`<description>`: A textual description of the SIP content.
-`<submissionAgreement>`: The identifier of the submission agreement.
+
+| Argument              | Description                                                                                                |
+|-----------------------|------------------------------------------------------------------------------------------------------------|
+| `<rootPathStr>`       | The absolute path to the root directory containing the data to be packaged. (See "Input File Structure" below). |
+| `<outputFolder>`      | The absolute path to the directory where the generated SIP will be saved.                                     |
+| `<description>`       | A textual description of the SIP content.                                                                  |
+| `<submissionAgreement>` | The identifier of the submission agreement.                                                                |
 
 **Example:**
 ```bash
@@ -42,9 +44,11 @@ java -jar target/dps-eark-generator-1.0-SNAPSHOT-jar-with-dependencies.jar gener
 ### `validate`
 Validates an existing E-ARK SIP against a specified E-ARK version.
 
-**Arguments:**
-`<pathToSip>`: The absolute path to the SIP to be validated (can be a folder or a ZIP file).
-`<pathToReportOutput>`: The absolute path where the JSON validation report will be saved.
+
+| Argument             | Description                                                                          |
+|----------------------|--------------------------------------------------------------------------------------|
+| `<pathToSip>`        | The absolute path to the SIP to be validated (can be a folder or a ZIP file).        |
+| `<pathToReportOutput>` | The absolute path where the JSON validation report will be saved.                      |
 
 **Example (Folder SIP):**
 ```bash
