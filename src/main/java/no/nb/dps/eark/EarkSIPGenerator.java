@@ -22,8 +22,9 @@ import java.util.stream.Stream;
 
 public class EarkSIPGenerator {
 
-    private static final String SOFTWARE_VERSION = "1.0.0";
-    private static final String SOFTWARE_NAME = "EARK SIP Generator";
+    private final String EARK_VERSION = "2.2.0";
+    private final String SOFTWARE_VERSION = "1.0.0";
+    private final String SOFTWARE_NAME = "EARK SIP Generator";
 
 
     public void createSip(Path rootPath, String description, String outputFolder, IPContentType contentType,
@@ -31,7 +32,7 @@ public class EarkSIPGenerator {
                           String submissionAgreement, String checksumAlgorithm, WriteStrategyEnum writeStrategy)
             throws IPException, InterruptedException {
 
-        SIP sip = new EARKSIP(rootPath.getFileName().toString(), contentType, contentInformationType, "2.2.0");
+        SIP sip = new EARKSIP(rootPath.getFileName().toString(), contentType, contentInformationType, EARK_VERSION);
         sip.addCreatorSoftwareAgent(SOFTWARE_NAME, SOFTWARE_VERSION);
         sip.addAgent(creatorAgent);
         sip.addAgent(submitterAgent);
